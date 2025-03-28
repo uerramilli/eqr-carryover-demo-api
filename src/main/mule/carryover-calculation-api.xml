@@ -133,7 +133,7 @@ output application/json
 	"year": attributes.queryParams.year,
 	"month": attributes.queryParams.month,
 	"when": now(),
-	"joe":"usha changes"
+	"msg":"adding QA changes"
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
