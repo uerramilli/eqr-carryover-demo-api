@@ -1,0 +1,10 @@
+{
+  "modelVersion": "1.0.0",
+  "name": "eqr-carryover-demo-api",
+  "version": "1.0.0-SNAPSHOT",
+  "source": "file:///Users/vsithole/AnypointCodeBuilder/eqr-carryover-demo-api/pom.xml",
+  "natures": [
+    "mule"
+  ],
+  "components": []
+}
