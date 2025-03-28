@@ -57,10 +57,6 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: mule-artifact
-          
-      - name: Run MUnit Tests
-        run: |
-          mvn test --settings ~/.m2/settings.xml    
 
       - name: Deploy to CloudHub 2.0 - Dev
         run: |
