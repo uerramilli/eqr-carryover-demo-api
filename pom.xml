@@ -16,10 +16,6 @@
 		<app.runtime>4.9.0</app.runtime>
 		<app.releasechannel>LTS</app.releasechannel>
 		<app.javaversion>17</app.javaversion>
-		<!-- 
-		<app.runtime>4.9.0</app.runtime>
-		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
-		-->
 	</properties>
 
 	<build>
@@ -41,8 +37,8 @@
 						<muleVersion>4.9.2</muleVersion>
 						<releaseChannel>EDGE</releaseChannel>
 						<javaVersion>${app.javaversion}</javaVersion>
-						<applicationName>eqr-carryover-calc-api</applicationName>
-						<environment>DEV</environment>
+						<applicationName>eqr-carryover-demo-api</applicationName>
+						<environment>QA</environment>
 						<businessGroup>Equity Residential</businessGroup>
 						<provider>MC</provider>
 						<replicas>1</replicas>
