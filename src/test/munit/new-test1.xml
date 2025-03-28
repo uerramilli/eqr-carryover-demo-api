@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="new-test1.xml" />
+	<munit:test name="new-test1-get:\carryover:carryover-calculation-api-configTest" doc:id="051b34c8-bd6c-476b-abe5-1b6ebfb35581" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to get:\carryover:carryover-calculation-api-config" doc:id="97149328-700f-46aa-b60a-c99472e5bcdd" name="get:\carryover:carryover-calculation-api-config"/>
+		</munit:execution>
+		<munit:validation >
+			<set-payload value='#[{&#10;	"year": "2005",&#10;	"month": "03",&#10;	"when": "now"&#10;}]' doc:name="Set Payload" doc:id="5255d3e9-a973-4df4-bc18-0ab566fcd16b"/>
+			<munit-tools:assert-that doc:name="Assert that" doc:id="23749ad0-d24a-4ec5-816d-6e7293897075" expression="#[payload.year]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+
+</mule>

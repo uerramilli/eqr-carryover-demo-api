@@ -57,10 +57,14 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: mule-artifact
+          
+      - name: Run MUnit Tests
+        run: |
+          mvn test --settings ~/.m2/settings.xml    
 
       - name: Deploy to CloudHub 2.0 - Dev
         run: |
-          mvn deploy --settings ~/.m2/settings.xml -DskipMunitTests -DmuleDeploy \
+          mvn deploy --settings ~/.m2/settings.xml -DmuleDeploy \
           -Dclient.id="${{ secrets.CONNECTED_APP_CLIENT_ID }}" \
           -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}" \
           -Danypoint.businessGroup="DEV" 
