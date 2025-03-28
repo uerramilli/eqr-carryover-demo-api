@@ -12,10 +12,10 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
-        <app.runtime>4.9.0</app.runtime>
+		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
+		<app.runtime>4.9.0</app.runtime>
 		<app.releasechannel>LTS</app.releasechannel>
-        <app.javaversion>17</app.javaversion>
+		<app.javaversion>17</app.javaversion>
 		<!-- 
 		<app.runtime>4.9.0</app.runtime>
 		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
@@ -38,20 +38,20 @@
 				<configuration>
 					<cloudhub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>${app.runtime}</muleVersion>
+						<muleVersion>4.9.0:6e-java17</muleVersion>
 						<releaseChannel>NONE</releaseChannel>
-                        <javaVersion>${app.javaversion}</javaVersion>
+						<javaVersion>${app.javaversion}</javaVersion>
 						<applicationName>eqr-carryover-calc-api</applicationName>
 						<environment>DEV</environment>
-                        <businessGroup>Equity Residential</businessGroup>
-                        <provider>MC</provider>
+						<businessGroup>Equity Residential</businessGroup>
+						<provider>MC</provider>
 						<replicas>1</replicas>
-                        <vCores>0.1</vCores>
+						<vCores>0.1</vCores>
 						<target>Cloudhub-US-East-2</target>
-                        <server>Repository</server>
+						<server>Repository</server>
 						<deploymentSettings>
-                            <generateDefaultPublicUrl>true</generateDefaultPublicUrl>
-                        </deploymentSettings>
+							<generateDefaultPublicUrl>true</generateDefaultPublicUrl>
+						</deploymentSettings>
 					</cloudhub2Deployment>
 					<classifier>mule-application</classifier>
 				</configuration>
@@ -95,11 +95,11 @@
 			<layout>default</layout>
 		</repository>
 		<repository>
-            <id>Repository</id>
-            <name>Private Exchange repository</name>
-            <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
-            <layout>default</layout>
-        </repository>
+			<id>Repository</id>
+			<name>Private Exchange repository</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
+			<layout>default</layout>
+		</repository>
 		<repository>
 			<id>mulesoft-releases</id>
 			<name>MuleSoft Releases Repository</name>
@@ -120,12 +120,12 @@
 		</pluginRepository>
 	</pluginRepositories>
 	<distributionManagement>
-    <repository>
-      <id>Repository</id>
-      <name>Corporate Repository</name>
-      <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
-      <layout>default</layout>
-    </repository>
-  </distributionManagement>
+		<repository>
+			<id>Repository</id>
+			<name>Corporate Repository</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v3/organizations/${project.groupId}/maven</url>
+			<layout>default</layout>
+		</repository>
+	</distributionManagement>
 
 </project>
